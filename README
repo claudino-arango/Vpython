@@ -1,9 +1,8 @@
-
-
-This is a double pendulum simulatio.
-
+Python simulation of a double pendulum.
 run under python 2.7 
 
-python-visual
+
+Dependencies: 
+-python-visual
 
 
