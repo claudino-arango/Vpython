@@ -8,23 +8,13 @@ scene.height=700
 scene.ambient=0.5
 scene.forward=(-1,-1,-1)
 
-#arrow(pos=vector(0,0,0),axis=(1,0,0),length=2,shaftwidth=0.1,material=materials.unshaded)
-#label(text="x",pos=vector(2,0,0),box=False,opacity=0.0,color=color.red)
-
-
-#label(text="y",pos=vector(0,2,0),box=False,opacity=0.0,color=color.red)
-
-#arrow(pos=vector(0,0,0),axis=(0,0,1),length=2,shaftwidth=0.1,material=materials.unshaded)
-#label(text="z",pos=vector(0,0,2),box=False,opacity=0.0,color=color.red,shafwidth=20)
-
-
 #armazon
 verti=box(pos=vector(0,1,0),size=vector(0.1,2,0.1),material=materials.wood,color=color.orange)
 hori=box(pos=vector(0.45,2,0),size=vector(1,0.1,0.1),material=materials.wood,color=color.orange)
 piso=box(pos=vector(0,0,0),size=vector(2.5,0.1,2.5),material=materials.wood,color=color.orange)
 
 
-#un pendulo.
+#First pendulim
 x1=0.95
 y1=1.25
 z1=0
@@ -32,7 +22,7 @@ la=curve(pos=[(0.95,2,0),(x1,y1,z1)],radius=0.009,color=color.red)
 esferaa=sphere(pos=(x1,y1,z1),radius=0.1,color=color.blue)
 
 
-#otro pendulo.
+#Second pendulum
 x2=0.95
 y2=0.5
 z2=0
@@ -40,14 +30,13 @@ z2=0
 lb=curve(pos=[(x1,y1,z1),(x2,y2,z2)],radius=0.009)
 esferab=sphere(pos=(x2,y2,z2),radius=0.1,color=color.green)
 
-
+#Initial conditions
 l=0.875
 w=2*pi*sqrt(9.8/l)
 t=0
 
  
 while True:
-#rate(10)
     rate(10)
 #Angulo entre "dos pendulos".
     L1=np.array([0.95-x1,2-y1,0-z1])
